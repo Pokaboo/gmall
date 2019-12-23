@@ -1,16 +1,18 @@
 package com.pokaboo.gmall.user.mapper;
 
+
 import com.pokaboo.gmall.user.bean.UmsMember;
-import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Component;
+import tk.mybatis.mapper.common.Mapper;
 
 /**
  * @author pokab
  */
-@Mapper
-public interface UserMapper {
+public interface UserMapper extends Mapper<UmsMember> {
 
     /**
      * 查询用户
+     *
      * @param userName
      * @return
      */

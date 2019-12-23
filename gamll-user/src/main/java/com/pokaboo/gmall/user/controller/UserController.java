@@ -19,11 +19,11 @@ public class UserController {
     UserService userService;
 
 
-    @RequestMapping("/getUser/{userName}")
+    @RequestMapping("/getUser/{id}")
     @ResponseBody
-    public UmsMember getUserInfo(@PathVariable String userName){
-        UmsMember umsMember = userService.findUser(userName);
-        System.out.println(userName);
+    public UmsMember getUserInfo(@PathVariable String id){
+        UmsMember umsMember = userService.findUser(id);
+        System.out.println(id);
         System.out.println(umsMember.toString());
         return umsMember;
     }

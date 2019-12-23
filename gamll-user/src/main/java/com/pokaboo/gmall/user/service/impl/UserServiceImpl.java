@@ -16,7 +16,8 @@ public class UserServiceImpl  implements UserService {
     UserMapper userMapper;
 
     @Override
-    public UmsMember findUser(String userName) {
-        return userMapper.findUser(userName);
+    public UmsMember findUser(String id) {
+        //return userMapper.findUser(userName);
+        return (UmsMember) userMapper.selectByPrimaryKey(id);
     }
 }
